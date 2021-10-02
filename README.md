@@ -10,7 +10,7 @@ If True:<br>
 User can select his desire options, click submit<br>
 
 else:<br>
-error meaage will be shown.
+error message will be shown.
 
 All Response will recorded in MONGODB, including user details and responses.<br>
 <br>
