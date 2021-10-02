@@ -11,22 +11,23 @@ coll = db.users_vote
 def voting():
     name = input('Enter your name', type="text")
     age = input('Enter your age', type=NUMBER)
-
+    
+    put_text('Checking whether you are eligible or not....')
     if age >=18:
-        put_text('Check your details..')
+        put_text('Checking your details..')
 
         put_table([['NAME','AGE'],
         [name, age]])
 
         check = checkbox(options = ['All details are correct.'])
 
-        if check:
-            selction = radio("Select your party",['Congress','BJP','AAP'])
+        if check != 0:
+            selection = radio("Select your party",['Congress','BJP','AAP'])
 
             records = {
                 'name':name,
                 'age':age,
-                'vote_for': selction
+                'vote_for': selection
             }
             coll.insert_one(records)
 
@@ -40,7 +41,7 @@ def voting():
 
 
             else:
-                return style(put_text('Voting has been ended, We will announce the result soon..'),'color:green')    
+                return style(put_text('Voting has ended, We will announce the results soon..'),'color:green')    
 
     else:
         style(put_text('You are not eligible for voting..'),'color:red')
@@ -52,6 +53,6 @@ def voting():
 
 
         else:
-            return style(put_text('Voting has been ended, We will announce the result soon..'),'color:green')
+            return style(put_text('Voting has ended, We will announce the results soon..'),'color:green')
 
 voting()
