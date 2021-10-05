@@ -11,7 +11,9 @@ coll = db.users_vote
 def voting():
     name = input('Enter your name', type="text")
     age = input('Enter your age', type=NUMBER)
-
+    
+    #Age Validation
+    
     if age >=18:
         put_text('Check your details..')
 
