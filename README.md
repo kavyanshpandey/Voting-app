@@ -1,5 +1,4 @@
 # Voting-app
-
 Sample Voting App, using pywebio.<br>
 
 ### WorkFLow<br>
@@ -8,8 +7,17 @@ Checking will be done on the basis of age.<br>
 If True:<br>
 User can select his desire options, click submit<br>
 
+### Contribution guideline
 
-All Response will recorded in MONGODB, including user details and responses.<br>
+Step 1: create a .env file to the root dir first
+
+Step 2: create your  environment variables
+#important var name should be in caps
+like: HOST = "your host address" #without quotes
+      PORt = any number
+
+
+All Response will recorded in database, including user details and responses.<br>
 <br>
 
 ### Snapshots<br>
