@@ -1,16 +1,34 @@
 from pywebio.input import *
 from pywebio.output import *
 from pymongo import MongoClient
+import os
+from pathlib import Path
+from dotenv import load_dotenv
 
-client = MongoClient('localhost',port=27017)
+# Get the base directory
+basepath = Path()
+basedir = str(basepath.cwd())
+
+
+# Load the environment variables
+envars = basepath.cwd() / '.env'
+load_dotenv(envars)
+
+
+# Read an environment variable.
+HOST = os.getenv('HOST')
+PORT = os.getenv('PORT')
+
+#Setup database connectivity
+client = MongoClient(HOST,PORT)
 db = client.User_records
-
 coll = db.users_vote
+    
 
 
 def voting():
-    name = input('Enter your name', type="text")
-    age = input('Enter your age', type=NUMBER)
+    name = input('Enter your name', type="text",required=True)
+    age = input('Enter your age', type=NUMBER,required=True)
 
     if age >=18:
         put_text('Check your details..')
