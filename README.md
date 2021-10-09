@@ -3,7 +3,7 @@
 Sample Voting App, using pywebio.<br>
 
 ### WorkFLow<br>
-User will enter his/her name and age.<br>
+User will have to enter his/her name and age.<br>
 Checking will be done on the basis of age.<br>
 If True:<br>
 User can select his desire options, click submit<br>
@@ -22,3 +22,4 @@ All Response will recorded in MONGODB, including user details and responses.<br>
 <br>
 <br>
 ### Thanks
+# feel free to contribute.
