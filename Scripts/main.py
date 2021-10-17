@@ -13,7 +13,7 @@ def voting():
     age = input('Enter your age', type=NUMBER)
 
     if age >=18:
-        put_text('Check your details..')
+        put_text('Check your details...')
 
         put_table([['NAME','AGE'],
         [name, age]])
@@ -21,7 +21,7 @@ def voting():
         check = checkbox(options = ['All details are correct.'])
 
         if check:
-            selction = radio("Select your party",['Congress','BJP','AAP'])
+            selction = radio("Select your party",['Congress','BJP','AAP','SP'])
 
             records = {
                 'name':name,
@@ -37,8 +37,6 @@ def voting():
 
             if keep_voting == 'Yes':
                 voting()
-
-
             else:
                 return style(put_text('Voting has been ended, We will announce the result soon..'),'color:green')    
 
@@ -52,6 +50,6 @@ def voting():
 
 
         else:
-            return style(put_text('Voting has been ended, We will announce the result soon..'),'color:green')
+            return style(put_text('Voting has been ended, We will announce the result soon..Stay tuned!'),'color:green')
 
 voting()
