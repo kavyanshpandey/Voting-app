@@ -1,12 +1,12 @@
 from  pywebio.input import*
 from pywebio.output import *
 
-idle = textarea('CODE Editor', code={
+idle = textarea('CODE EDITOR', code={
     'mode':"python",
     'theme':'dracula'
 })
 
-def A(a):
+def B(a):
     return a
 
-print(A(idle))
+print(B(idle))
